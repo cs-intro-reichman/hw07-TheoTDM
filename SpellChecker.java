@@ -19,6 +19,8 @@ public class SpellChecker {
 		return str.substring(0,1);
 	}
 	public static int levenshtein(String word1, String word2) {
+		word1 = word1.toLowerCase();
+		word2 = word2.toLowerCase();
 		if (word2.length() == 0){
 			return word1.length();
 		} 
@@ -44,7 +46,6 @@ public class SpellChecker {
 	}
 
 	public static String spellChecker(String word, int threshold, String[] dictionary) {
-		word = word.toLowerCase();
 		int min = levenshtein(word, dictionary[0]);
 		String spelled_word = dictionary[0];
 		for (int i=1; i < dictionary.length; i++){
