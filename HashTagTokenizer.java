@@ -11,6 +11,7 @@ public class HashTagTokenizer {
 	}
 
 	public static String[] readDictionary(String fileName) {
+			
 		String[] dictionary = new String[3000];
 		In in = new In(fileName);
 		for (int i=0; i < dictionary.length; i++){
